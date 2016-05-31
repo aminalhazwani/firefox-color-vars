@@ -10,9 +10,11 @@
   "license": "MPL-2.0",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-change": "^1.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-json-sass": "0.0.2",
     "gulp-less-json-variables": "^1.0.4",
-    "gulp-sass": "^2.2.0"
+    "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.5"
   }
 }

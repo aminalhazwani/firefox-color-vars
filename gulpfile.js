@@ -1,6 +1,9 @@
 var jsonSass = require('gulp-json-sass'),
+    change = require('gulp-change'),
     gulp = require('gulp'),
-    sass = require('gulp-sass');
+    rename = require('gulp-rename'),
+    sass = require('gulp-sass'),
+    sequence = require('gulp-sequence');
  
 gulp.task('sass', function() {
   return gulp
@@ -9,4 +12,23 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('json2', function() {
+  return gulp.src('firefox-color-vars.scss')
+        .pipe(change(performChange))
+        .pipe(rename('firefox-color-vars-precomp.json'))
+        .pipe(gulp.dest('clr-precompile'))
+})
+
+function performChange(content) {
+    var transform = 
+      content.replace(/\:/g, '", "hex" :')
+             .replace(/\#/g, '"')
+             .replace(/\$/g, '{ "name" : "')
+             .replace(/;/g, '" },');
+    return '[\n' + transform + ']';
+}
+
+
 gulp.task('default',['sass']);
+
+gulp.task('precompile', sequence('sass', 'json2'));
