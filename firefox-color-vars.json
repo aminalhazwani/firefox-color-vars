@@ -24,7 +24,7 @@
     "default": "#0996f8",
     "light": "#2ea3ff",
     "lighter": "#61b4ff",
-    "lighter": "#95cdff"
+    "lightest": "#95cdff"
   },
   "teal": {
     "darkest": "#00736f",
