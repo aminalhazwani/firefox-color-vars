@@ -7,15 +7,15 @@ var jsonSass = require('gulp-json-sass'),
  
 gulp.task('sass', function() {
   return gulp
-    .src('firefox-color-vars.json')
+    .src('firefox-colors.json')
     .pipe(jsonSass())
     .pipe(gulp.dest('./'));
 });
 
 gulp.task('json2', function() {
-  return gulp.src('firefox-color-vars.scss')
+  return gulp.src('firefox-colors.scss')
         .pipe(change(performChange))
-        .pipe(rename('firefox-color-vars-precomp.json'))
+        .pipe(rename('firefox-colors.json'))
         .pipe(gulp.dest('clr-precompile'))
 })
 
