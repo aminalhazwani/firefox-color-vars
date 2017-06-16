@@ -1,13 +1,16 @@
 var jsonSass = require('gulp-json-sass'),
     change = require('gulp-change'),
     gulp = require('gulp'),
+    yaml = require('gulp-yaml')
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     sequence = require('gulp-sequence');
  
 gulp.task('sass', function() {
   return gulp
-    .src('firefox-colors.json')
+    .src('firefox-colors.yaml')
+    .pipe(yaml({ space: 2 }))
+    .pipe(gulp.dest('./'))
     .pipe(jsonSass())
     .pipe(gulp.dest('./'));
 });
