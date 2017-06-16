@@ -1,6 +1,6 @@
 # Firefox Colors
 
-The purpose of this repository is to serve Firefox Colors in different formats based on your needs. These series of gulp tasks generate the different files starting from a `.yaml`.
+The purpose of this repository is to serve Firefox Colors in different formats based on your needs. These series of gulp tasks generate the different files starting from a `.json`.
 
 ## Dependencies / Installation
 
@@ -35,22 +35,16 @@ This runs through all dependencies listed in `package.json` and downloads them t
 
 ## Gulp commands
 
-Convert `.yaml` to `.json`
+Convert `.json` to `.scss`
 
 ```
-$ gulp yaml2json
+$ gulp json2sass
 ```
 
-Convert `.yaml` to `.scss`
+Convert `.json` to `.css`
 
 ```
-$ gulp yaml2sass
-```
-
-Convert `.yaml` to `.css`
-
-```
-$ gulp yaml2css
+$ gulp json2css
 ```
 
 All of the above combined
@@ -61,6 +55,7 @@ $ gulp colors
 
 ## To Do
 
-- [ ] yaml2clr
-- [ ] yaml2ase
+- [ ] json2clr
+- [ ] json2ase
+- [ ] json2sketchpalette
 - [ ] npm module

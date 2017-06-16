@@ -1,7 +1,7 @@
 {
   "name": "firefox-colors",
   "version": "1.0.0",
-  "description": "Sass and less variables for firefox colors",
+  "description": "JSON, Sass and CSS variables for Firefox Colors",
   "repository": "https://github.com/FirefoxUX/firefox-color-vars",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "gulp-less-json-variables": "^1.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sequence": "^0.4.5",
-    "gulp-yaml": "^1.0.1"
+    "gulp-sequence": "^0.4.5"
   }
 }
