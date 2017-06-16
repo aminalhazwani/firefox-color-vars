@@ -1,12 +1,66 @@
-# color vars for the style guide
+# Firefox Colors
 
-make changes to the json then run gulp to update the scss file
+The purpose of this repository is to serve Firefox Colors in different formats based on your needs. These series of gulp tasks generate the different files starting from a `.yaml`.
 
-# CLR (OsX Color Lib)
+## Dependencies / Installation
 
-Add the CLR file to '~/Library/Colors' and all of these colors will show up in your picker.
+Install Node. If you use homebrew, do:
 
-`gulp precompile` converts the json to a format that works with a CLR generator script i found here: `https://github.com/tokorom/json2clr`
+```bash
+$ brew install node
+```
 
-to rebuild the clr script, you'll need to clone the above repo and follow instructions there.
+Otherwise, you can download and install from [here](http://nodejs.org/download/). At the time of writing the Node version being use is 7.5.
 
+Install Gulp globally:
+
+```
+$ npm install -g gulp
+```
+
+Clone the repository:
+
+```
+$ git clone git@github.com:FirefoxUX/firefox-color-vars.git
+```
+
+Install the dependencies:
+
+```
+$ cd firefox-color-vars
+$ npm install
+```
+
+This runs through all dependencies listed in `package.json` and downloads them to a `node_modules` folder in your project directory.
+
+## Gulp commands
+
+Convert `.yaml` to `.json`
+
+```
+$ gulp yaml2json
+```
+
+Convert `.yaml` to `.scss`
+
+```
+$ gulp yaml2sass
+```
+
+Convert `.yaml` to `.css`
+
+```
+$ gulp yaml2css
+```
+
+All of the above combined
+
+```
+$ gulp colors
+```
+
+## To Do
+
+- [ ] yaml2clr
+- [ ] yaml2ase
+- [ ] npm module
