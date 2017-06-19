@@ -55,7 +55,6 @@ $ gulp colors
 
 ## To Do
 
-- [ ] json2clr
 - [ ] json2ase
 - [ ] json2sketchpalette
 - [ ] json2xml
